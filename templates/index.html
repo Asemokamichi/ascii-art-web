@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Ascii-Art-Web</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="/templates/style.css">
+    <!-- Bootstrap CSS v5.2.0-beta1 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"  integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+  </head>
+  <body id="cont">
+    
+     <div class="my-auto px-lg-5 my-lg-5 cont">
+            <!-- -------------------section------------------------ -->
+            <section class="text-dark  text-center p-lg-5">
+                    <div class="pb-lg-5 mt-4">
+                      <h1>ASCII - ART - WEB</h1>
+                    </div>
+                      <form class="p-4" method="POST" action="/ascii-art">
+                          <div class="input-group" >
+                            <textarea placeholder="Enter Text" name="text" class="form-control" aria-label="With textarea" required oninvalid="this.setCustomValidity('Please write the text')" oninput="setCustomValidity('')"></textarea>
+                          </div>
+                         <div class="input-group mt-3 mb-5">
+                            <select name="banner" class="form-select" id="inputGroupSelect04" aria-label="Example select with button addon" required oninvalid="this.setCustomValidity('Please choose one of the banners')" oninput="setCustomValidity('')">
+                              <option value="standard.txt">Standard</option>
+                              <option value="shadow.txt">Shadow</option>
+                              <option value="thinkertoy.txt">Thinkertoy</option>
+                            </select>
+                            <button class="btn px-3" style="background-color: blue; color:white" type="submit" name="submit">GENERATE</button>
+                            <button class="btn px-3" style="background-color: blue; color:white" type="export" name="export">EXPORT</button>
+                          </div>
+                      </form>
+                    
+                    <div class="d-flex justify-content-center" style="width: 100%;">
+                      <div class="gradient-border col-10 col-s-12"> 
+                        <pre class="ps-4" name="Text">{{.ModifiedText}}</pre>
+                      </div>
+                    </div>
+                
+            </section>
+     </div>
+     
+    <!-- Bootstrap JavaScript Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy" crossorigin="anonymous"></script>
+  </body>
+</html>
